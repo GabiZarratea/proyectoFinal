@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url("https://img.freepik.com/vector-gratis/diseno-patron-pow-colorido-lindo-gatito_1017-14710.jpg?w=2000");
+    background-image: url(/assets/imagen/fondo.jpeg);
 }
 /* HEADER */
 header{
@@ -40,22 +40,29 @@ main{
 }
 
 .parrafoForm{
+    font-size: 1.3rem;
     font-weight: 600;
 }
 .tituloForm,
 .parrafoForm{
+    color: #fff;
     text-align: center;
 }
 
 .contenedorForm .avatar{
     height: 130px;
     width: 130px;
+    border-radius: 25px;
 }
 
 form{
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 30px;
+    background-image: linear-gradient(190deg, #92b3a9 0, #83ada4 10%, #70a69f 20%, #5b9f9b 30%, #409697 40%, #0e8d94 50%, #008492 60%, #007b91 70%, #007292 80%, #006a93 90%, #006394 100%);
 }
 
 .labels,
@@ -63,9 +70,12 @@ form{
 .textarea{
     padding: .3rem;
     width: 100%;
+    border-radius: 20px;
+    border: none;
 }
 
 .botonForm{
+    margin-bottom: 10px;
     padding: .4rem;
     width: 20vw;
     border-radius: 30px;
@@ -78,13 +88,51 @@ form{
     background-color: #0e8d94;
 }
 
+#textoForm{
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 30px;
+    color: #fff;
+    background-image: linear-gradient(190deg, #92b3a9 0, #83ada4 10%, #70a69f 20%, #5b9f9b 30%, #409697 40%, #0e8d94 50%, #008492 60%, #007b91 70%, #007292 80%, #006a93 90%, #006394 100%);
+
+}
 /* FOOTER */
 footer{
-    height: 10vh;
-    background-color: #167d83;
+    min-height: 10vh;
     color: white;
+    background-color: #167d83;
 }
 
 .icon-social{
     width: 30px;
+}
+
+
+/* MEDIA QUERY SOLO FOOTER y un poco del form */
+@media only screen and (max-width:410px){
+    .contenedorForm{
+        width: 320px;
+    }
+    
+    footer{
+
+    }
+    footer div{
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .ms-5{
+        margin-left: 0rem !important;
+    }
+
+    .me-5{
+        margin-left: 0rem !important;
+    }
+}
+@media only screen and (max-width:409px){
+    footer div{
+        display: flex;
+        flex-direction: column !important;
+    }
 }
