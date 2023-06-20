@@ -1,2 +1,0 @@
-# proyectoFinal
-Grupo: Pocas Pulgas
