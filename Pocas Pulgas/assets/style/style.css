@@ -33,16 +33,24 @@ main{
     min-height: 80vh;
 }
 
-.contenedorForm{
-    width: 400px;
-    margin: auto;
-    margin-top: 10px;
+.formYMapa{
+    display: flex;
+    align-items: center;
 }
 
+.contenedorForm{
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+}
+/* ----------------------------------------- */
+/* FORMULARIO */
 .parrafoForm{
     font-size: 1.3rem;
     font-weight: 600;
 }
+
 .tituloForm,
 .parrafoForm{
     color: #fff;
@@ -62,25 +70,43 @@ form{
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
     background-image: linear-gradient(190deg, #92b3a9 0, #83ada4 10%, #70a69f 20%, #5b9f9b 30%, #409697 40%, #0e8d94 50%, #008492 60%, #007b91 70%, #007292 80%, #006a93 90%, #006394 100%);
 }
-
+/* ----------------------------------------- */
+/* INPUTS */
 .labels,
 .inputs,
-.textarea{
+.textarea,
+select{
     padding: .3rem;
-    width: 100%;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
     border-radius: 20px;
     border: none;
 }
 
+select{
+    margin-top: 10px;
+}
+
+.labels:focus,
+.inputs:focus,
+.textarea:focus{
+    outline: 1px solid rgba(0,0,0,0.7);
+}
+
+
 .botonForm{
-    margin-bottom: 10px;
     padding: .4rem;
-    width: 20vw;
+    margin-bottom: 10px;
+    width: 70px;
     border-radius: 30px;
-    color: #0e8d94;
+    float: right;
     border: 1px solid #0e8d94;
+    color: #0e8d94;
 }
 
 .botonForm:hover{
@@ -89,12 +115,18 @@ form{
 }
 
 #textoForm{
-    font-size: 1.5rem;
+    padding: 8px;
+    margin: 5px;
+    font-size: 1.25rem;
     text-align: center;
     border-radius: 30px;
     color: #fff;
     background-image: linear-gradient(190deg, #92b3a9 0, #83ada4 10%, #70a69f 20%, #5b9f9b 30%, #409697 40%, #0e8d94 50%, #008492 60%, #007b91 70%, #007292 80%, #006a93 90%, #006394 100%);
+}
 
+iframe{
+    height: 20rem;
+    width: 35rem;
 }
 /* FOOTER */
 footer{
@@ -108,8 +140,12 @@ footer{
 }
 
 
-/* MEDIA QUERY SOLO FOOTER y un poco del form */
-@media only screen and (max-width:410px){
+
+@media only screen and (max-width:912px){
+    .formYMapa{
+       flex-direction: column;
+    }
+
     .contenedorForm{
         width: 320px;
     }
@@ -129,8 +165,17 @@ footer{
     .me-5{
         margin-left: 0rem !important;
     }
+
+    
 }
-@media only screen and (max-width:409px){
+
+@media only screen and (max-width:570px){
+   iframe{
+    width: 20rem;
+   }
+}
+
+@media only screen and (max-width:410px){
     footer div{
         display: flex;
         flex-direction: column !important;

@@ -40,7 +40,8 @@
         </nav>
     </header>
     <main>
-        <section class="contenedorForm">
+        <section class="formYMapa">
+            <article class="contenedorForm">
                 <form action="" id="formulario">
                     <img src="/assets/imagen/logo.png" alt="Logo" class="avatar">
                     <h1 class="tituloForm">¡Contáctanos!</h1>
@@ -58,17 +59,33 @@
                         <input class="inputs" type="email" name="email" id="email" placeholder="ejemplo@gmail.com">
                     </fieldset>
                     <fieldset>
+                        <label class="labels" for="telefono"></label>
+                        <input class="inputs" type="text" name="telefono" id="telefono" placeholder="Ingresar número e teléfono">
+                    </fieldset>
+                    <fieldset>
+                        <select name="animales" id="animal">
+                            <option value="1">Perro</option>
+                            <option value="2">Gato</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
                         <label class="labels" for="mensaje"></label>
-                        <textarea class="textarea" name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje aquí..." ></textarea>
+                        <textarea class="textarea" name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje aquí..."></textarea>
                     </fieldset>
                     <fieldset>
                         <label class="labels" for="enviar"></label>
                         <input type="button" class="botonForm" id="btnForm" value="Enviar">
                     </fieldset>
+                    <p id="textoForm"></p>
                 </form>
-                <p id="textoForm"></p>  
+            </article>
+            <article>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.243040483404!2d-58.401195400000006!3d-345980153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0x6a1cd58fa7e6383d!2sParaguay%202334%205%20f%2C%20C1121ABL%20CABA!5e0!3m2!1ses-419!2sar!4v1687294715904!5m2!1ses-419!2sar" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
         </section>
     </main>
+        
     <footer class="d-flex flex-row p-2 justify-content-between align-items-center bg-gradient">
         <div>
             <a href="https://www.instagram.com/" target="_blank"><img src="/assets/imagen/instagram.svg" alt="contact instagram" class="icon-social me-4 ms-5"></a>
