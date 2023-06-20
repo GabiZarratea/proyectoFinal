@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://img.freepik.com/vector-gratis/diseno-patron-pow-colorido-lindo-gatito_1017-14710.jpg?w=2000");
+}
+/* HEADER */
+header{
+    height: 10vh;
+}
+
+nav{
+    background-color: #0e8d94;
+}
+
+ul, li, a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+.logo_{
+    margin-left: 2rem;
+    width: 50px;
+    height: 50px;
+}
+
+/* MAIN */
+main{
+    min-height: 80vh;
+}
+
+.contenedorForm{
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.parrafoForm{
+    font-weight: 600;
+}
+.tituloForm,
+.parrafoForm{
+    text-align: center;
+}
+
+.contenedorForm .avatar{
+    height: 130px;
+    width: 130px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labels,
+.inputs,
+.textarea{
+    padding: .3rem;
+    width: 100%;
+}
+
+.botonForm{
+    padding: .4rem;
+    width: 20vw;
+    border-radius: 30px;
+    color: #0e8d94;
+    border: 1px solid #0e8d94;
+}
+
+.botonForm:hover{
+    color: #fff;
+    background-color: #0e8d94;
+}
+
+/* FOOTER */
+footer{
+    height: 10vh;
+    background-color: #167d83;
+    color: white;
+}
+
+.icon-social{
+    width: 30px;
+}
