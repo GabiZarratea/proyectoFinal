@@ -13,70 +13,39 @@ fetch (url)
         
         imprimirTarjetasCarrito(articulosSeleccionados, container)
         //--------------botones-------//
-    //     let contador=0;
 
-    //     const cantidad = document.querySelector('#text');
-    //     const botonMenos = document.getElementById('menos');
-    //     const botonMas = document.getElementById('mas');
-       
-    //    let productoID ;
-        
-        
-    //         const menos = (productoID) =>{
-    //             const producto =productos.find(prod => prod._id=== productoID)
-    //           if (producto && producto.disponibles>0){
-    //               producto.disponibles--;
-    //               actualizar(productoID)
-    //           }
-    //         }  
-    //         const mas = (productoID)=>{
-    //             const producto =productos.find(prod => prod._id=== productoID)
-    //           if (producto){
-    //               producto.disponibles++;
-    //               actualizar(productoID)
-    //           }
-              
-    //         }    
-    //         const actualizar = (productoID) => {
-    //             const producto =productos.find(prod => prod._id=== productoID)
-    //             if (cantidad && producto){
-    //                 cantidad.textContent= producto.disponibles
-    //             }
-    //         }    
-    //         productos.forEach(element => {
-    //             botonMenos.addEventListener('click', menos)    
-    //             botonMas.addEventListener('click', mas)    
-                
-    //         });   
-           
-    //     })
-    let contador = 0;
 
     const cantidad = document.querySelector('#text');
-    const botonMenos = document.getElementById('menos');
-    const botonMas = document.getElementById('mas');
+    const botonMenos = document.getElementsByClassName('menos');
+    const botonMas = document.getElementsByClassName('mas');
     
-    const menos = () => {
-      if (contador > 0) {
-        contador--;
-        actualizar();
-      }
-    };
-    
-    const mas = () => {
-      contador++;
-      actualizar();
-    };
-    
-    const actualizar = () => {
-      cantidad.textContent = contador;
-    };
-    
-    botonMenos.addEventListener('click', menos);
-    botonMas.addEventListener('click', mas);
 })
         
     .catch(error => console.log(error))
 
+    container.addEventListener('click', (e) =>{
+        
+        if (e.target.dataset.action == "menos"){
 
-      
+            const span = e.target.parentElement.children[1]
+            const cantidad = parseInt(span.textContent)
+            console.log(cantidad)
+            console.log(e.target.dataset.disponibles);
+            if (cantidad >=2){
+                span.textContent= cantidad-1
+            }
+        } 
+        if (e.target.dataset.action == "mas"){
+            const span = e.target.parentElement.children[1]
+            const cantidad = parseInt(span.textContent)
+            const disponibles = parseInt(e.target.dataset.disponibles)
+            console.log(cantidad)
+            console.log(e.target.dataset.disponibles);
+            if ( cantidad < disponibles ){
+                span.textContent= cantidad + 1
+            }
+        }
+        
+    })
+    
+    

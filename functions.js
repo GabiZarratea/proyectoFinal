@@ -75,9 +75,9 @@ const crearPlantillaCarrito = (producto) => {
                         </div>
                                                 
                         <div>
-                        <button id="menos">-</button>
+                        <button data-action="menos" data-disponibles=${producto.disponibles}>-</button>
                         <span id="text">1</span>
-                        <button id="mas">+</button>
+                        <button data-action="mas" data-disponibles=${producto.disponibles}>+</button>
                         </div>   
                         
               </div>`;
