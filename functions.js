@@ -1,4 +1,4 @@
-export { url, imprimirTarjetas, crearPlantillaCarrito, imprimirTarjetasCarrito, imprimirDatosCarrito, };
+export { url, imprimirTarjetas, crearPlantillaCarrito, imprimirTarjetasCarrito, imprimirDatosCarrito,cantidadTotal };
 
 const url = "https://mindhub-xj03.onrender.com/api/petshop";
 
@@ -54,11 +54,11 @@ function imprimirDatos(array, lugar) {
 }
 
 //-------------funciones para carrito------------/////
-
+let cantidadTotal ;
 const crearPlantillaCarrito = (producto) => {
 
   const articulosSeleccionados = JSON.parse(localStorage.getItem("seleccionados"))
-    
+  
     let href = location.pathname.includes("index")
       ? "./assets/pages/details.html"
       : "./details.html"
@@ -67,11 +67,11 @@ const crearPlantillaCarrito = (producto) => {
                         <img src="${producto.imagen}" class="img_cards rounded-top-2">
                         <div class="card-body">
                             <h5 class="card-title">${producto.producto}</h5>
-                            <p>Price: $ ${producto.precio}</p>      
+                            <p>Price: $<span>${producto.precio}</span></p>      
                         </div>
                         <div class="card-body d-flex justify-content-around">
                             <button data-id="${producto._id}" class="btn btn-carrito btn-success ${articulosSeleccionados ? 'btn-danger' : 'btn-success'}"></button>
-                            <a href="${href} " class="btn btn-details"> Ver más </a>
+                            <h5 > Total a Pagar: $<span data-total>${producto.precio}</span></h5>
                         </div>
                                                 
                         <div>
