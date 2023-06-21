@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocas Pulgas | Contactanos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="https://cdn-0.emojis.wiki/emoji-pics/apple/paw-prints-apple.png" type="image/x-icon">
+</head>
+<body id="bodyForm">
+    <header>
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <img class="logo_" src="../images/logo.png" width="50px" alt="logo">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link home-button" id="active" aria-current="page" href="../../index.html">Inicio |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link up-button" href="./farmacia.html">Farmacia |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link past-button " aria-current="page" href="./jugueteria.html">Juguetería |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link con-button" aria-current="page" href="#">Contacto |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link stats-button" aria-current="page" href="./tienda.html"><img src="../images/carrito.svg" class="carrito"></img></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="formYMapa">
+            <article class="contenedorForm">
+                <form action="#" id="formulario">
+                    <img src="../images/logo.png" alt="Logo" class="avatar">
+                    <h1>¡Contactanos!</h1>
+                    <p>Esperamos que te haya gustado la experiencia en nuestro Pocas Pulgas</p>
+                    <p>Te invitamos a dejarnos un comentario y/o sugerencia, te responderemos lo antes posible!<img class="huellas" src="https://cdn-0.emojis.wiki/emoji-pics/apple/paw-prints-apple.png"></img></p>
+                    <div class="padreForm d-flex">
+                        <div class="textosForms">
+                            <fieldset>
+                                <label class="labels" for="nombre"></label>
+                                <input class="inputs" type="text" name="nombre" id="nombre" placeholder="Nombre:">
+                            </fieldset>
+                            <fieldset>
+                                <label class="labels" for="apellido"></label>
+                                <input class="inputs" type="text" name="apellido" id="apellido" placeholder="Apellido:">
+                            </fieldset>
+                            <fieldset>
+                                <label class="labels" for="email"></label>
+                                <input class="inputs" type="email" name="email" id="email" placeholder="Mail:">
+                            </fieldset>
+                            <fieldset>
+                                <label class="labels" for="telefono"></label>
+                                <input class="inputs" type="text" name="telefono" id="telefono" placeholder="Tel:">
+                            </fieldset>
+                            <fieldset>
+                                <select name="animales" id="animal">
+                                    <option value="1">Perro</option>
+                                    <option value="2">Gato</option>
+                                    <option value="3">Otro</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="mensajesForm">
+                            <fieldset>
+                                <label class="labels" for="mensaje"></label>
+                                <textarea class="textarea" name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Deje su comentario o consulta aquí..."></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <label class="labels" for="enviar"></label>
+                                <input type="button" class="botonForm" id="btnForm" value="Enviar">
+                            </fieldset>
+                        </div>
+                    </div>
+                    <p id="textoForm"></p>
+                </form>
+            </article>
+            <article class="local">
+                <h4>¿Te gustaría conocer nuestra Tienda Física?</h4>
+                <p>Allí tenemos muchas sorpresas esperandote a vos y a tu mascota..</p>
+                <p>Los esperamos cuando quieran!</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.243040483404!2d-58.401195400000006!3d-345980153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0x6a1cd58fa7e6383d!2sParaguay%202334%205%20f%2C%20C1121ABL%20CABA!5e0!3m2!1ses-419!2sar!4v1687294715904!5m2!1ses-419!2sar" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+        </section>
+        <div class="d-flex justify-content-center">
+            <a href="#" class="btn bg-secondary text-white volverArriba mb-3 d-flex align-items-center justify-content-center">Volver Arriba<img class="huellitas" src="https://cdn-0.emojis.wiki/emoji-pics/apple/paw-prints-apple.png"></img></a>
+        </div>
+    </main>
+        
+    <footer class="d-flex flex-row p-2 justify-content-between align-items-center">
+        <div>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.svg" alt="contact instagram" class="icon-social me-4 ms-5"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.svg" alt="contact facebook" class="icon-social me-4"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="../images/whatsapp.svg" alt="contact whatsapp" class="icon-social"></a>
+        </div>
+        <h4 class="me-5 mt-3">Pocas Pulgas ©</h4>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="/assets/js/contacto.js"></script>
+</body>
+</html>
