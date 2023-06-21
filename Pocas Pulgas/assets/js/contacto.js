@@ -14,6 +14,6 @@ function mostrarMensaje() {
     }
 
     const texto = document.getElementById("textoForm")
-    texto.textContent = "Mensaje enviado, ¡te esperamos la proxima!"
+    texto.textContent = "Mensaje enviado, ¡te esperamos la próxima!"
     texto.preventDefault()
 }

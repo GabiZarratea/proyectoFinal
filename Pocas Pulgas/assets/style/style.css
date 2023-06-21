@@ -7,7 +7,9 @@
 body{
     background-image: url(/assets/imagen/fondo.jpeg);
 }
-/* HEADER */
+
+                                        /* HEADER */
+
 header{
     height: 10vh;
 }
@@ -28,33 +30,35 @@ ul, li, a{
     height: 50px;
 }
 
-/* MAIN */
+                                        /* MAIN */
+
 main{
     min-height: 80vh;
 }
 
 .formYMapa{
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
 .contenedorForm{
-    width: 500px;
-    margin: auto;
+    width: 520px;
     margin-top: 10px;
     display: flex;
 }
-/* ----------------------------------------- */
-/* FORMULARIO */
-.parrafoForm{
-    font-size: 1.3rem;
-    font-weight: 600;
-}
+
+                                        /* FORMULARIO */
 
 .tituloForm,
 .parrafoForm{
     color: #fff;
     text-align: center;
+}
+
+.parrafoForm{
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .contenedorForm .avatar{
@@ -73,14 +77,15 @@ form{
     box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
     background-image: linear-gradient(190deg, #92b3a9 0, #83ada4 10%, #70a69f 20%, #5b9f9b 30%, #409697 40%, #0e8d94 50%, #008492 60%, #007b91 70%, #007292 80%, #006a93 90%, #006394 100%);
 }
-/* ----------------------------------------- */
-/* INPUTS */
-.labels,
+
+                                        /* INPUTS */
+
 .inputs,
 .textarea,
 select{
     padding: .3rem;
-    width: 300px;
+    margin: 5px;
+    width: 210px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -88,21 +93,24 @@ select{
     border: none;
 }
 
-select{
-    margin-top: 10px;
+.textarea{
+    margin-left: 2rem;
+    height: 15rem;
 }
 
-.labels:focus,
+select{
+    margin-top: 20px;
+}
+
 .inputs:focus,
 .textarea:focus{
     outline: 1px solid rgba(0,0,0,0.7);
 }
 
-
 .botonForm{
     padding: .4rem;
-    margin-bottom: 10px;
-    width: 70px;
+    margin-top: 16.5px;
+    width: 100px;
     border-radius: 30px;
     float: right;
     border: 1px solid #0e8d94;
@@ -114,6 +122,8 @@ select{
     background-color: #0e8d94;
 }
 
+                                    /* TEXTO AL MANDAR EL FORM */
+
 #textoForm{
     padding: 8px;
     margin: 5px;
@@ -121,14 +131,23 @@ select{
     text-align: center;
     border-radius: 30px;
     color: #fff;
-    background-image: linear-gradient(190deg, #92b3a9 0, #83ada4 10%, #70a69f 20%, #5b9f9b 30%, #409697 40%, #0e8d94 50%, #008492 60%, #007b91 70%, #007292 80%, #006a93 90%, #006394 100%);
+    
+}
+
+                                    /* MAPA */
+
+.contenedorMapa h2{
+    text-align: center;
 }
 
 iframe{
     height: 20rem;
-    width: 35rem;
+    width: 25rem;
+    border-radius: 30px;
 }
-/* FOOTER */
+
+                                    /* FOOTER */
+
 footer{
     min-height: 10vh;
     color: white;
@@ -139,25 +158,32 @@ footer{
     width: 30px;
 }
 
-
-
-@media only screen and (max-width:912px){
+@media only screen and (max-width:940px){
+                                /* FORM */
     .formYMapa{
        flex-direction: column;
     }
 
     .contenedorForm{
-        width: 320px;
+        width: 800px;
     }
-    
-    footer{
-
+                                /* INPUTS */
+    .inputs,
+    .textarea,
+    select{
+        width: 350px;
     }
+                                /* MAPA */
+    iframe{
+        margin-right: 0px;
+        width: 35rem;
+    }
+                                /* FOOTER */
     footer div{
         display: flex;
         flex-direction: row !important;
     }
-
+                                /* ICONOS FOOTER */
     .ms-5{
         margin-left: 0rem !important;
     }
@@ -169,15 +195,73 @@ footer{
     
 }
 
-@media only screen and (max-width:570px){
-   iframe{
-    width: 20rem;
-   }
+@media only screen and (max-width:810px){
+                                /* FORM */
+
+   .contenedorForm{
+        width: 550px;
+    }
+
+    .parrafoForm {
+        font-size: 1rem;
+    }
+
+                                 /* INPUTS */
+
+    .inputs,
+    .textarea,
+    select{
+        width: 230px;
+    }
 }
 
-@media only screen and (max-width:410px){
+@media only screen and (max-width:570px){
+                                /* FORM */
+
+    .contenedorForm{
+        width: 490px;
+    }
+
+    .parrafoForm {
+        padding: .3rem;
+        font-size: 1rem;
+    }
+
+                                /* MAPA */
+
+    iframe{
+        width: 25rem;
+    }
+
+                                /* FOOTER */ 
     footer div{
         display: flex;
         flex-direction: column !important;
+    }
+}
+
+@media only screen and (max-width:569px){
+                                /* FORM */ 
+    .contenedorForm{
+        width: 300px;
+    }
+                                /* INPUTS */ 
+    .inputs,
+    .textarea,
+    select{
+        width: 120px;
+    }
+
+    .botonForm{
+        width: 125px;
+        margin-top: 72px;
+    }
+
+    .textarea{
+        height: 180px;
+    }
+                                /* MAPA */ 
+    iframe{
+        width: 19rem;
     }
 }
